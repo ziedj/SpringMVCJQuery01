@@ -19,12 +19,6 @@
 			</form>
 		</div>
 		<div>
-			Text envoye :
-			<output id="ttt" name="xxx"></output>
-
-		</div>
-
-		<div>
 			Name :
 			<output id="nameId"></output>
 			First Name :
