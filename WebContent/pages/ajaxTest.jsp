@@ -10,7 +10,7 @@
 	<h2>Spring MVC + jQuery + Autocomplete example</h2>
 
 
-	<div title="AJAX" style="border : 1px solid black; border-color: blue;">
+	<div title="AJAX" style="border: 1px solid black; border-color: blue;">
 
 		<div>
 			<form method="post" id="testForm" action="ajaxTest">
@@ -50,6 +50,13 @@
 						});
 					});
 		</script>
+	</div>
+
+	<div>
+		<form action="ajaxJsonTest">
+			<input type="submit" value="JSON">
+		</form>
+
 	</div>
 
 </body>

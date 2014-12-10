@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.domains.Tag;
+import com.domains.User;
 
 @Controller
 public class JQueryController {
@@ -51,6 +52,17 @@ public class JQueryController {
 	@RequestMapping(value = "/ajaxTest", method = RequestMethod.GET)
 	public String respondAjaxRequest() {
 		return "ajaxTest";
+	}
+
+	@RequestMapping(value = "/ajaxJsonTest", method = RequestMethod.POST)
+	public @ResponseBody User respondToAjaxJSONRequest(
+			@RequestParam String name, @RequestParam String firstName) {
+		return (new User(name, firstName));
+	}
+
+	@RequestMapping(value = "/ajaxJsonTest", method = RequestMethod.GET)
+	public String respondAjaxJSONRequest() {
+		return "ajaxJsonTest";
 	}
 
 	private List<Tag> simulateSearchResult(String tagName) {
